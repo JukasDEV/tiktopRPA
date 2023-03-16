@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ghost-cursor": "^1.1.16",
+    "puppeteer": "^19.6.2"
+  }
+}
