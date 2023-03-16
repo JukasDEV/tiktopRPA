@@ -3,7 +3,6 @@ import { sleep } from "./util";
 import { createCursor } from "ghost-cursor";
 import puppeteer from "puppeteer";
 
-
 const start = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
@@ -52,10 +51,7 @@ const start = async () => {
 
   await page.waitForSelector('input[name="username"]');
 
-  await page.type(
-    'input[name="username"]',
-    "seu email aqui"
-  );
+  await page.type('input[name="username"]', "seu email aqui");
 
   await page.waitForSelector('input[placeholder="Senha"]');
 
@@ -64,12 +60,9 @@ const start = async () => {
   await page.keyboard.press("NumpadEnter");
 
   console.log("loguei");
-  
+
   await sleep(1 * 20000);
 
-
-
   await sleep(5 * 15000);
-
 };
 (async () => await start())();
